@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>10 Days LIVE WordPress Class — Build a ₹50,000 Website for Just ₹2,999</title>
+  <meta name="description" content="Learn to build a professional ₹50,000 worth website in just 10 days with LIVE WordPress training. Beginner friendly. Only ₹2,999. Limited seats!"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<div class="announce-bar" id="announceBar">
+  <span class="announce-dot"></span>
+  <span id="seatCounter">⚡ Only <strong id="seatsLeft">7</strong> seats left — Batch filling fast!</span>
+  <span class="announce-sep">|</span>
+  <span>Offer ends in: <strong id="timerDisplay" class="timer-red">--:--:--</strong></span>
+  <button class="announce-close" id="announceClose" aria-label="Close">✕</button>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#2563eb"/><path d="M8 12h16M8 16h10M8 20h13" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+      <span class="brand-name">WP<span class="brand-accent">Class</span></span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-seats">🔥 <strong id="navSeats">7</strong> seats left</div>
+      <a href="#payment" class="btn btn-primary btn-sm nav-cta pulse-btn">JOIN NOW — ₹2,999</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="container hero-inner">
+    <div class="hero-badge animate-pop">🔥 LIMITED SEATS — NEXT BATCH STARTING SOON</div>
+
+    <h1 class="hero-heading animate-up-delay-1">
+      Stop Paying <span class="strike-red">₹50,000</span> For a Website.<br/>
+      <span class="hero-highlight typewriter" id="typewriterText"></span>
+    </h1>
+
+    <p class="hero-sub animate-up-delay-2">Learn to build your own <strong>professional business website</strong> from scratch — in just 10 days of LIVE online training. No experience. No coding. Just results.</p>
+
+    <div class="social-strip animate-up-delay-3">
+      <div class="social-item"><span class="social-num" data-target="1200">0</span><span>Students Enrolled</span></div>
+      <div class="social-divider"></div>
+      <div class="social-item"><span class="social-num" data-target="98">0</span><span>% Satisfaction</span></div>
+      <div class="social-divider"></div>
+      <div class="social-item"><span class="social-num" data-target="10">0</span><span>Days Program</span></div>
+    </div>
+
+    <div class="hero-price-block animate-up-delay-4">
+      <div class="value-tag">💰 Real Market Value: <s>₹50,000+</s></div>
+      <div class="price-row">
+        <span class="price-was">₹5,999</span>
+        <span class="price-now">₹2,999</span>
+        <span class="price-badge-off">50% OFF</span>
+      </div>
+      <p class="price-meta">10 Days &bull; LIVE Classes &bull; Real Projects &bull; Doubt Support</p>
+    </div>
+
+    <div class="hero-btns animate-up-delay-5">
+      <a href="#payment" class="btn btn-hero-primary magnetic" id="heroJoinBtn">
+        <span>🚀 ENROLL NOW — ₹2,999</span>
+        <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/919999999999" class="btn btn-wa-outline magnetic" id="heroWaBtn" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Ask on WhatsApp
+      </a>
+    </div>
+    <p class="trust-line animate-up-delay-5">🔒 Secure payment &nbsp;|&nbsp; ✅ No coding required &nbsp;|&nbsp; 📱 Class details on WhatsApp</p>
+  </div>
+</section>
+
+<!-- ===== PAIN SECTION ===== -->
+<section class="pain-section" id="pain">
+  <div class="container">
+    <div class="pain-inner reveal">
+      <div class="pain-left">
+        <div class="pain-label">THE PROBLEM</div>
+        <h2>You Need a Website. But...</h2>
+        <ul class="pain-list">
+          <li><span class="pain-x">✗</span> Agencies charge <strong>₹20,000–₹1,00,000</strong> for a basic website</li>
+          <li><span class="pain-x">✗</span> Freelancers are unreliable and <strong>miss deadlines</strong></li>
+          <li><span class="pain-x">✗</span> YouTube tutorials are <strong>scattered & confusing</strong></li>
+          <li><span class="pain-x">✗</span> You feel like you <strong>need to know coding</strong> to build a website</li>
+          <li><span class="pain-x">✗</span> Every day without a website = <strong>lost customers &amp; income</strong></li>
+        </ul>
+      </div>
+      <div class="pain-right">
+        <div class="solution-box">
+          <div class="solution-glow"></div>
+          <div class="solution-label">THE SOLUTION</div>
+          <div class="solution-title">10 Days LIVE WordPress Class</div>
+          <p>In just 10 days, you will build the same website that costs <strong>₹50,000</strong> when done by an agency — completely on your own. Forever yours. Zero ongoing cost.</p>
+          <div class="solution-price">Only <span>₹2,999</span></div>
+          <a href="#payment" class="btn btn-primary btn-full mt16">YES, I WANT THIS →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUE COMPARISON ===== -->
+<section class="section compare-section" id="compare">
+  <div class="container">
+    <div class="section-label reveal">THE MATH IS SIMPLE</div>
+    <h2 class="section-heading reveal">What Are You Really Getting?</h2>
+    <div class="compare-grid reveal-stagger">
+      <div class="compare-card compare-bad">
+        <div class="compare-icon">😰</div>
+        <h3>Hiring an Agency</h3>
+        <div class="compare-price red-price">₹30,000 – ₹1,00,000</div>
+        <ul>
+          <li>❌ You depend on them forever</li>
+          <li>❌ Every edit costs more money</li>
+          <li>❌ No control over your site</li>
+          <li>❌ Months of waiting</li>
+        </ul>
+      </div>
+      <div class="compare-card compare-mid">
+        <div class="compare-icon">😐</div>
+        <h3>Recorded Online Courses</h3>
+        <div class="compare-price mid-price">₹4,000 – ₹15,000</div>
+        <ul>
+          <li>❌ No live interaction</li>
+          <li>❌ Doubts go unanswered</li>
+          <li>❌ No accountability</li>
+          <li>❌ Easy to give up</li>
+        </ul>
+      </div>
+      <div class="compare-card compare-good shine-card">
+        <div class="compare-best-tag">⭐ BEST CHOICE</div>
+        <div class="compare-icon">🎉</div>
+        <h3>Our 10-Day LIVE Class</h3>
+        <div class="compare-price green-price">₹2,999 only</div>
+        <ul>
+          <li>✅ LIVE with expert instructor</li>
+          <li>✅ Doubts cleared instantly</li>
+          <li>✅ Build &amp; own your website</li>
+          <li>✅ Results in 10 days</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY THIS CLASS ===== -->
+<section class="section section-alt" id="why">
+  <div class="container">
+    <div class="section-label reveal">WHY THIS CLASS?</div>
+    <h2 class="section-heading reveal">Not Just a Course. A <span class="accent">Transformation.</span></h2>
+    <div class="features-grid">
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">🎥</span></div>
+        <h3>100% Live Classes</h3>
+        <p>Real-time sessions — ask questions, get instant answers. Not pre-recorded lectures that you forget the next day.</p>
+      </div>
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">💻</span></div>
+        <h3>Learn By Building</h3>
+        <p>Every session = hands-on website building. You don't just watch — you DO. That's how skills stick forever.</p>
+      </div>
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">🌐</span></div>
+        <h3>Real Website You Own</h3>
+        <p>Walk away on Day 10 with a live, published website — yours to keep, edit, and grow. No agency needed ever again.</p>
+      </div>
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">📱</span></div>
+        <h3>Mobile-First Design</h3>
+        <p>Your sites will look stunning on every device — phone, tablet, laptop. Because that's where your customers are.</p>
+      </div>
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">🛠</span></div>
+        <h3>WordPress + Elementor</h3>
+        <p>The same tools used by 43% of all websites globally. Industry standard. No coding. Drag. Drop. Publish.</p>
+      </div>
+      <div class="feature-card reveal-stagger">
+        <div class="feature-icon-wrap"><span class="feature-icon">🙋</span></div>
+        <h3>Zero Doubt Left Behind</h3>
+        <p>Every doubt gets answered live. WhatsApp support between sessions. You'll never feel lost or stuck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CURRICULUM ===== -->
+<section class="section" id="curriculum">
+  <div class="container">
+    <div class="section-label reveal">10-DAY CURRICULUM</div>
+    <h2 class="section-heading reveal">Day-by-Day, You'll Go From <span class="accent">Zero → Website</span></h2>
+    <div class="timeline">
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">01</div>
+        <div class="tl-card"><span class="tl-tag">Foundation</span><h4>WordPress Introduction + Domain + Hosting Setup</h4><p>Your website's home base — configured and live.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">02</div>
+        <div class="tl-card"><span class="tl-tag">Setup</span><h4>WordPress Dashboard + Themes</h4><p>Navigate WP like a pro. Install premium-looking themes for free.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">03</div>
+        <div class="tl-card"><span class="tl-tag">Design</span><h4>Elementor Website Building</h4><p>The drag-and-drop builder that makes you feel like a designer.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">04</div>
+        <div class="tl-card"><span class="tl-tag">Structure</span><h4>Header + Footer + Navigation</h4><p>Professional site structure that visitors trust instantly.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">05</div>
+        <div class="tl-card"><span class="tl-tag">Build</span><h4>Full Professional Business Website</h4><p>Complete multi-page business site — your biggest milestone yet.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">06</div>
+        <div class="tl-card"><span class="tl-tag">Marketing</span><h4>Landing Page Design</h4><p>Build pages that convert visitors into leads and customers.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">07</div>
+        <div class="tl-card"><span class="tl-tag">Connect</span><h4>Contact Forms + WhatsApp Integration</h4><p>Capture leads. Get inquiries directly to your phone.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">08</div>
+        <div class="tl-card"><span class="tl-tag">E-Commerce</span><h4>WooCommerce + Product Setup Basics</h4><p>Sell products online. Turn your website into a store.</p></div>
+      </div>
+      <div class="tl-item reveal-stagger">
+        <div class="tl-day">09</div>
+        <div class="tl-card"><span class="tl-tag">Growth</span><h4>SEO + Speed + Mobile Optimization</h4><p>Get found on Google. Load fast. Rank higher.</p></div>
+      </div>
+      <div class="tl-item tl-item--last reveal-stagger">
+        <div class="tl-day tl-day--last">10</div>
+        <div class="tl-card tl-card--last"><span class="tl-tag tl-tag--last">🚀 Launch</span><h4>Final Project + Website Launch</h4><p>Your website goes LIVE. You share the link. People visit. Dreams begin.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU WILL BUILD ===== -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-label reveal">WHAT YOU WILL BUILD</div>
+    <h2 class="section-heading reveal">4 Real Websites. Yours Forever.</h2>
+    <p class="section-sub reveal">Freelancers charge ₹8,000–₹25,000 per website. You'll build all 4 in just 10 days.</p>
+    <div class="build-grid">
+      <div class="build-card reveal-stagger">
+        <div class="build-value">Worth ₹20,000+</div>
+        <div class="build-icon">🏢</div>
+        <h3>Business Website</h3>
+        <p>Professional multi-page website any business owner would pay big money for.</p>
+      </div>
+      <div class="build-card reveal-stagger">
+        <div class="build-value">Worth ₹12,000+</div>
+        <div class="build-icon">🎨</div>
+        <h3>Portfolio Website</h3>
+        <p>Showcase your skills and get hired — or attract clients as a freelancer.</p>
+      </div>
+      <div class="build-card reveal-stagger">
+        <div class="build-value">Worth ₹15,000+</div>
+        <div class="build-icon">📣</div>
+        <h3>Landing Page</h3>
+        <p>High-converting pages that generate leads and sales for any product or service.</p>
+      </div>
+      <div class="build-card reveal-stagger">
+        <div class="build-value">Worth ₹25,000+</div>
+        <div class="build-icon">🛒</div>
+        <h3>E-Commerce Store</h3>
+        <p>Sell products online with WooCommerce. Agencies charge ₹25,000 for this alone.</p>
+      </div>
+    </div>
+    <div class="build-total reveal">
+      <div class="build-total-inner">
+        <p>Total Value of Skills You'll Gain</p>
+        <div class="build-total-price">₹72,000+</div>
+        <p>Your investment today: <strong style="color:#22c55e;">₹2,999</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-label reveal">STUDENT RESULTS</div>
+    <h2 class="section-heading reveal">Real People. Real Websites. <span class="accent">Real Results.</span></h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal-stagger">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I'm a homemaker with zero technical knowledge. After this class, I launched my own cake business website. My first online order came within a week!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#fde68a;color:#92400e;">P</div>
+          <div><strong>Priya Sharma</strong><span>Homemaker → Cake Business Owner</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal-stagger">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I saved ₹35,000 by building my shop's website myself. The instructor explains everything so clearly. Best ₹2,999 I ever spent in my life!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#bfdbfe;color:#1e40af;">R</div>
+          <div><strong>Rajan Mehta</strong><span>Small Shop Owner, Mumbai</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal-stagger">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I was a student who thought coding was required for websites. Now I'm freelancing and charging ₹12,000 per website. This class changed my life!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#dcfce7;color:#15803d;">A</div>
+          <div><strong>Aditya Kumar</strong><span>Student → Freelance Web Designer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO IS THIS FOR ===== -->
+<section class="section section-alt" id="who">
+  <div class="container">
+    <div class="section-label reveal">IS THIS FOR YOU?</div>
+    <h2 class="section-heading reveal">You're in the Right Place If You...</h2>
+    <div class="who-grid">
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Want to start a business</strong> and need a professional online presence</div></div>
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Tired of paying agencies</strong> thousands for a simple website</div></div>
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Want to freelance</strong> and earn ₹10,000–₹50,000/month building websites</div></div>
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Are a student</strong> who wants a high-income skill before graduation</div></div>
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Run a small business</strong> and want more customers from Google</div></div>
+      <div class="who-card reveal-stagger"><span class="who-check">✓</span><div><strong>Have NO experience</strong> — complete beginners are most welcome here</div></div>
+    </div>
+    <div class="who-note reveal">
+      <strong>🚫 No coding.</strong> &nbsp;<strong>🚫 No design experience.</strong> &nbsp;<strong>🚫 No expensive tools.</strong><br/>
+      Just basic computer knowledge + your dedication + 10 days = Your website is live.
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCY SECTION ===== -->
+<section class="urgency-section" id="urgency">
+  <div class="container urgency-inner reveal">
+    <div class="urgency-left">
+      <div class="urgency-icon">⏳</div>
+      <div class="urgency-label">OFFER EXPIRES SOON</div>
+      <h2>Don't Miss This Batch</h2>
+      <p>Seats are limited. The ₹50% discount disappears when this batch is full. Next batch price: <strong>₹4,999</strong></p>
+      <div class="countdown-box">
+        <div class="countdown-item"><span id="hours">00</span><label>Hours</label></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item"><span id="minutes">00</span><label>Minutes</label></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item"><span id="seconds">00</span><label>Seconds</label></div>
+      </div>
+    </div>
+    <div class="urgency-right">
+      <div class="seat-progress">
+        <div class="seat-header">
+          <span>Seats Taken</span>
+          <span><strong id="seatsTaken">23</strong> / 30</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width:76%"></div>
+        </div>
+        <p class="seats-remaining">🔴 Only <strong id="seatsRemaining">7</strong> seats left — <em>secure yours now</em></p>
+      </div>
+      <a href="#payment" class="btn btn-primary btn-lg btn-full mt16 pulse-btn">
+        🎯 CLAIM MY SEAT — ₹2,999
+      </a>
+      <p class="urgency-trust">✅ Instant WhatsApp confirmation after registration</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-label reveal">PRICING</div>
+    <h2 class="section-heading reveal">One Simple Decision.<br/><span class="accent">Life-Changing Skills.</span></h2>
+    <div class="pricing-wrapper reveal">
+      <div class="pricing-card shine-card">
+        <div class="pricing-glow"></div>
+        <div class="pricing-best-tag">🔥 MOST POPULAR</div>
+        <h3 class="pricing-title">10 Days LIVE WordPress Mastery</h3>
+        <div class="pricing-amount">
+          <div>
+            <span class="pricing-old">₹5,999</span>
+            <span class="pricing-current">₹2,999</span>
+          </div>
+          <div class="pricing-save-tag">You save ₹3,000 today!</div>
+        </div>
+        <ul class="pricing-list">
+          <li><span class="pi-check">✓</span>10 Days LIVE Classes with Expert</li>
+          <li><span class="pi-check">✓</span>Build 4 Real Websites (Worth ₹72,000+)</li>
+          <li><span class="pi-check">✓</span>WordPress + Elementor Training</li>
+          <li><span class="pi-check">✓</span>Live Doubt Clearing Every Session</li>
+          <li><span class="pi-check">✓</span>WhatsApp Support Group Access</li>
+          <li><span class="pi-check">✓</span>SEO + Speed Optimization</li>
+          <li><span class="pi-check">✓</span>Launch Your Website on Day 10</li>
+          <li><span class="pi-check pi-bonus">★</span><strong>BONUS: Freelance Starter Guide</strong></li>
+        </ul>
+        <a href="#payment" class="btn btn-pricing-cta btn-full pulse-btn" id="pricingJoinBtn">SECURE MY SEAT — ₹2,999</a>
+        <div class="pricing-bottom">
+          <span>🔒 Safe UPI Payment</span>
+          <span>|</span>
+          <span>💬 Class on WhatsApp</span>
+          <span>|</span>
+          <span>✅ Verified by 1200+ students</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHATSAPP BANNER ===== -->
+<section class="wa-banner" id="whatsapp-cta">
+  <div class="container wa-inner reveal">
+    <div class="wa-left">
+      <div class="wa-pulse-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <strong>Have questions before joining?</strong>
+        <p>Our team replies within minutes — ask anything!</p>
+      </div>
+    </div>
+    <a href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20know%20more%20about%20the%2010-Day%20WordPress%20Class" class="btn btn-wa-solid" id="waBannerBtn" target="_blank">
+      Chat on WhatsApp Now →
+    </a>
+  </div>
+</section>
+
+<!-- ===== PAYMENT + REGISTRATION ===== -->
+<section class="section" id="payment">
+  <div class="container">
+    <div class="section-label reveal">STEP 1 — PAYMENT</div>
+    <h2 class="section-heading reveal">PAY ₹2,999 &amp; <span class="accent">Lock Your Seat</span></h2>
+
+    <div class="pay-steps-row reveal">
+      <div class="pay-step"><div class="step-num">1</div><span>Scan QR &amp; Pay</span></div>
+      <div class="pay-arrow">→</div>
+      <div class="pay-step"><div class="step-num">2</div><span>Save Transaction ID</span></div>
+      <div class="pay-arrow">→</div>
+      <div class="pay-step"><div class="step-num">3</div><span>Fill Form Below</span></div>
+      <div class="pay-arrow">→</div>
+      <div class="pay-step"><div class="step-num">4</div><span>Get WhatsApp Confirmation</span></div>
+    </div>
+
+    <div class="payment-wrapper">
+      <div class="qr-box reveal">
+        <div class="qr-shine-ring"></div>
+        <div class="qr-placeholder" id="qrImageWrapper">
+          <img id="qrImage" src="" alt="UPI QR Code" style="display:none; width:100%; height:100%; object-fit:contain; border-radius:8px;"/>
+          <div id="qrFallback">
+            <div style="font-size:3rem;">📱</div>
+            <p>UPI QR CODE HERE<br/><small>Admin: update in admin panel</small></p>
+          </div>
+        </div>
+        <div class="qr-upi-box">
+          <p>UPI ID</p>
+          <strong id="displayUpiId">YOUR-UPI-ID@upi</strong>
+          <div class="qr-amount">₹2,999</div>
+        </div>
+        <a href="#register" class="btn btn-primary btn-full" id="paymentDoneBtn">✅ I HAVE PAID — FILL FORM</a>
+      </div>
+
+      <div class="register-box reveal" id="register">
+        <div class="register-header">
+          <h3>STEP 2 — CONFIRM REGISTRATION</h3>
+          <p>Fill your details after completing payment</p>
+        </div>
+        <form class="register-form" id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" placeholder="Your full name as in UPI" required/>
+            <span class="form-error" id="fullNameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp Number *</label>
+            <input type="tel" id="whatsapp" placeholder="10-digit number" maxlength="10" required/>
+            <span class="form-error" id="whatsappError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="your@email.com" required/>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="txnId">Transaction ID / UTR Number *</label>
+            <input type="text" id="txnId" placeholder="12-digit UPI transaction reference" required/>
+            <span class="form-error" id="txnIdError"></span>
+          </div>
+          <div class="form-group">
+            <label for="screenshot">Payment Screenshot *</label>
+            <div class="file-upload" id="fileUploadArea">
+              <input type="file" id="screenshot" accept="image/*" required/>
+              <div class="file-upload-inner">
+                <span>📎</span>
+                <span id="fileLabel">Tap to upload screenshot</span>
+              </div>
+            </div>
+            <span class="form-error" id="screenshotError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg pulse-btn" id="submitRegBtn">🚀 SUBMIT MY REGISTRATION</button>
+          <p class="form-note">⚠️ Payment is NOT automatically verified. Our team will manually verify and send class details to your WhatsApp within 24 hours.</p>
+        </form>
+        <div class="success-msg" id="successMsg" style="display:none;">
+          <div class="success-anim">🎉</div>
+          <h4>You're Almost In!</h4>
+          <p>Registration received! Our team will verify your payment and send class details to your WhatsApp. Keep an eye on your messages!</p>
+          <div class="success-wa">
+            <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa-solid">WhatsApp Us If You Have Questions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-label reveal">FAQ</div>
+    <h2 class="section-heading reveal">Questions? We've Got <span class="accent">Answers.</span></h2>
+    <div class="faq-list">
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq1-btn" aria-expanded="false" aria-controls="faq1-ans">Is this class live? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq1-ans"><p>Yes! 100% live, interactive sessions. You attend in real-time, see the instructor build live, and ask questions — just like an in-person class, from home.</p></div>
+      </div>
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq2-btn" aria-expanded="false" aria-controls="faq2-ans">Is it suitable for complete beginners? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq2-ans"><p>Yes! If you can browse the internet, you're ready. We start from absolute zero — no prior experience in design, coding, or websites is needed. Hundreds of beginners have succeeded already.</p></div>
+      </div>
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq3-btn" aria-expanded="false" aria-controls="faq3-ans">Do I need coding knowledge? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq3-ans"><p>Absolutely not! WordPress + Elementor is 100% visual. You drag and drop elements to build beautiful websites. No HTML, CSS, or programming required.</p></div>
+      </div>
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq4-btn" aria-expanded="false" aria-controls="faq4-ans">What will I be able to do after this class? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq4-ans"><p>You'll be able to: (1) Build and manage your own professional website, (2) Edit and update it anytime, (3) Offer website-building as a freelance service earning ₹10,000–₹50,000/project, (4) Help other businesses go online.</p></div>
+      </div>
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq5-btn" aria-expanded="false" aria-controls="faq5-ans">How do I pay and confirm my seat? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq5-ans"><p>Scan the UPI QR code above → pay ₹2,999 → note your Transaction ID → fill the registration form → submit. Our team will verify your payment and send class details to your WhatsApp within 24 hours.</p></div>
+      </div>
+      <div class="faq-item reveal-stagger">
+        <button class="faq-q" id="faq6-btn" aria-expanded="false" aria-controls="faq6-ans">Is there a refund if I'm not satisfied? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq6-ans"><p>We have a satisfaction-first approach. If you face any genuine issue, reach out to us on WhatsApp and we'll do our best to make it right. Please refer to our refund policy in the footer for full details.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="final">
+  <div class="final-particles" id="finalParticles"></div>
+  <div class="container final-inner reveal">
+    <div class="final-badge">🎯 YOUR LAST CHANCE AT THIS PRICE</div>
+    <h2>Your Website Journey <span class="final-highlight">Starts Today.</span></h2>
+    <p>10 Days. One Real Skill. One Real Website.<br/>Stop dreaming. Start building.</p>
+    <div class="final-price-row">
+      <span class="final-was">Market cost: ₹50,000+</span>
+      <span class="final-arrow">→</span>
+      <span class="final-now">Your cost: ₹2,999</span>
+    </div>
+    <div class="final-btns">
+      <a href="#payment" class="btn btn-final-primary magnetic pulse-btn" id="finalJoinBtn">🚀 JOIN THE LIVE CLASS NOW</a>
+      <a href="https://wa.me/919999999999" class="btn btn-wa-solid magnetic" id="finalWaBtn" target="_blank">💬 Chat on WhatsApp</a>
+    </div>
+    <div class="final-seats">
+      <span class="final-dot"></span>
+      <strong id="finalSeats">7</strong> seats remaining at ₹2,999
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand"><div class="brand-logo"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#2563eb"/><path d="M8 12h16M8 16h10M8 20h13" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div><span class="brand-name">WP<span class="brand-accent">Class</span></span></div>
+      <p>10 Days LIVE WordPress Website Class</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hello@wpclass.in" id="footerEmail">📧 hello@wpclass.in</a>
+      <a href="https://wa.me/919999999999" id="footerWa" target="_blank">💬 WhatsApp Us</a>
+      <a href="#" id="footerTerms">Terms &amp; Conditions</a>
+      <a href="#" id="footerPrivacy">Privacy Policy</a>
+      <a href="#" id="footerRefund">Refund Policy</a>
+    </div>
+    <p class="footer-copy">© 2026 — All Rights Reserved. 10 Days LIVE WordPress Website Class.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#payment" class="btn btn-primary flex-1" id="stickyJoinBtn">🚀 JOIN NOW — ₹2,999</a>
+  <a href="https://wa.me/919999999999" class="btn btn-whatsapp" id="stickyWaBtn" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WA
+  </a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919999999999" class="float-wa" id="floatWaBtn" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>

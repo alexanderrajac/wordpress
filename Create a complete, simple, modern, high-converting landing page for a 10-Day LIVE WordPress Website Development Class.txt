@@ -1,0 +1,216 @@
+﻿Create a complete, simple, modern, high-converting landing page for a 10-Day LIVE WordPress Website Development Class.
+CORE OFFER
+Course name:
+10 DAYS LIVE WORDPRESS WEBSITE CLASS
+Main headline:
+Build Your Own Professional Website in Just 10 Days
+Subheadline:
+Live teaching • Practical training • Real website project • Beginner friendly
+Price:
+₹2,999 only
+Use a clean, premium but simple design. Do not make it look like a complicated coaching website.
+DESIGN STYLE
+* Modern startup-style landing page
+* Mobile-first and fully responsive
+* Clean white background
+* Use WordPress-inspired blue as the primary accent
+* Dark navy text
+* Small amounts of gradient/glass effect
+* Rounded cards
+* Large readable typography
+* Smooth scrolling
+* Subtle animations only
+* No unnecessary 3D effects
+* Fast-loading design
+* Strong CTA buttons
+* Professional Indian online-class feel
+HERO SECTION
+Create a powerful hero section.
+Badge:
+🔥 LIMITED SEATS OPEN
+Heading:
+Build Your Own Website in 10 Days
+Highlight:
+LIVE WORDPRESS CLASS
+Description:
+Learn WordPress practically from setup to launching a real website.
+Show price prominently:
+₹2,999
+Small text:
+10 Days • LIVE Teaching • Practical Project
+Buttons:
+JOIN NOW — ₹2,999
+WHATSAPP US
+Add a small trust line:
+No advanced coding knowledge required
+WHY THIS CLASS?
+Create 6 simple feature cards:
+* 🎥 Live Classes
+* 💻 Practical Learning
+* 🌐 Build Real Websites
+* 📱 Mobile Responsive Design
+* 🛠 WordPress + Elementor
+* 🙋 Live Doubt Clearing
+WHAT YOU WILL LEARN
+Create a clean 10-day timeline:
+DAY 01
+WordPress Introduction + Domain + Hosting
+DAY 02
+WordPress Dashboard + Themes
+DAY 03
+Elementor Website Building
+DAY 04
+Header + Footer + Navigation
+DAY 05
+Build a Professional Business Website
+DAY 06
+Landing Page Design
+DAY 07
+Contact Forms + WhatsApp Integration
+DAY 08
+WooCommerce + Product Setup Basics
+DAY 09
+SEO + Speed + Mobile Optimization
+DAY 10
+Final Project + Website Launch
+WHAT YOU WILL BUILD
+Show 4 cards:
+Business Website
+Create a professional website for a business.
+Portfolio Website
+Showcase your skills, projects and services.
+Landing Page
+Create a conversion-focused landing page.
+Basic E-Commerce Website
+Learn the fundamentals of selling products online.
+WHO IS THIS FOR?
+Use simple cards:
+* Students
+* Beginners
+* Freelancers
+* Small Business Owners
+* Entrepreneurs
+* Anyone who wants to learn website creation
+Text:
+You don't need to be an expert. Start with basic computer knowledge and learn step-by-step.
+PRICING SECTION
+Create a visually strong pricing card.
+Original price:
+₹5,999
+Current price:
+₹2,999
+Text:
+10 Days LIVE WordPress Training
+Include:
+✓ Live Classes
+✓ Practical Website Project
+✓ WordPress Training
+✓ Elementor Training
+✓ Doubt Support
+✓ Website Launch Guidance
+CTA:
+SECURE MY SEAT — ₹2,999
+QR PAYMENT SECTION
+Create a dedicated payment section titled:
+PAY ₹2,999 & SECURE YOUR SEAT
+Instructions:
+Step 1: Scan the UPI QR
+Step 2: Pay ₹2,999
+Step 3: Enter your transaction details
+Step 4: Submit the registration
+Create a large QR-code placeholder:
+[UPI QR CODE HERE]
+Below it show:
+UPI ID: YOUR-UPI-ID@upi
+Amount:
+₹2,999
+Add button:
+I HAVE COMPLETED PAYMENT
+Important:
+The QR and UPI ID must be editable from the admin/backend.
+Do not claim that payment is automatically verified.
+REGISTRATION FORM
+After payment section create:
+CONFIRM YOUR REGISTRATION
+Fields:
+* Full Name
+* WhatsApp Number
+* Email
+* Transaction ID / UTR
+* Payment Screenshot
+Button:
+SUBMIT REGISTRATION
+After submission show:
+Registration submitted successfully!
+Our team will verify your payment and send the class details to your WhatsApp.
+WHATSAPP CTA
+Create WhatsApp buttons throughout the page.
+CTA text:
+Have Questions? Chat With Us on WhatsApp
+Use a configurable WhatsApp number from the admin settings.
+FAQ
+Create accordion FAQ:
+Is this class live?
+Yes. This is a live 10-day practical WordPress training program.
+Is it suitable for beginners?
+Yes. The course is designed to start from the basics.
+Do I need coding knowledge?
+No advanced coding knowledge is required.
+What will I build?
+You will work on real website-building projects.
+How do I pay?
+Scan the UPI QR and pay ₹2,999.
+How will I receive class details?
+After payment verification, class details will be sent through WhatsApp.
+FINAL CTA
+Create a strong final section:
+Your Website Journey Starts Here.
+10 Days. One Real Skill. One Real Website.
+₹2,999 only
+Button:
+JOIN THE LIVE CLASS
+Secondary button:
+CHAT ON WHATSAPP
+FOOTER
+Include:
+Class Name
+WhatsApp
+Email
+Terms & Conditions
+Privacy Policy
+Refund Policy
+Copyright:
+© 2026 — All Rights Reserved
+FUNCTIONAL REQUIREMENTS
+Build the entire landing page as a production-ready website.
+Requirements:
+* Fully responsive
+* Mobile-first
+* Fast loading
+* SEO-friendly
+* Accessible
+* Sticky mobile CTA
+* Smooth scrolling
+* WhatsApp integration
+* QR payment section
+* Registration form
+* Payment screenshot upload
+* Transaction ID field
+* Form validation
+* Success confirmation
+* Admin-editable QR image
+* Admin-editable UPI ID
+* Admin-editable WhatsApp number
+* Admin-editable course price
+* Admin-editable class dates
+* Admin can view registrations
+* Admin can verify payment status
+* Registration statuses:
+   * Pending
+   * Payment Verified
+   * Rejected
+   * Completed
+Do not add unnecessary features.
+The main goal is simple:
+LANDING PAGE → PAYMENT → REGISTRATION → PAYMENT VERIFICATION → WHATSAPP CLASS ACCESS
+Make the page visually attractive, trustworthy and optimized for converting visitors into ₹2,999 paid students.
