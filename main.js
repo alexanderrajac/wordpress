@@ -285,7 +285,8 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
 });
 
-/* ===== ADMIN PANEL ===== */
+/* ===== ADMIN PANEL — HIDDEN (commented out for public site) ===== */
+/*
 const adminPanelHTML = `
 <div class="admin-panel" id="adminPanel">
   <div class="admin-box" role="dialog" aria-modal="true" aria-label="Admin Panel">
@@ -363,14 +364,12 @@ document.getElementById('adminSave').addEventListener('click', () => {
   CONFIG.seatsTaken = +document.getElementById('adminTaken').value || CONFIG.seatsTaken;
   CONFIG.countdownHours = +document.getElementById('adminHours').value || CONFIG.countdownHours;
   CONFIG.classDates = document.getElementById('adminDates').value.trim();
-  // Reset countdown if hours changed
   localStorage.removeItem('wp_class_deadline');
   saveCfg();
   applyConfig();
   const savedMsg = document.getElementById('adminSavedMsg');
   savedMsg.style.opacity = '1';
   setTimeout(() => { savedMsg.style.opacity = '0'; }, 2200);
-  // Refresh seat display
   const newSeats = CONFIG.totalSeats - CONFIG.seatsTaken;
   ['seatsLeft','navSeats','seatsRemaining','finalSeats'].forEach(id => {
     const el = document.getElementById(id); if(el) el.textContent = newSeats;
@@ -379,25 +378,9 @@ document.getElementById('adminSave').addEventListener('click', () => {
   if (pFill) pFill.style.width = pctNew + '%';
   ['seatsTaken'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = CONFIG.seatsTaken; });
 });
+*/
 
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-function renderRegTable() {
-  const w = document.getElementById('regTableWrapper');
-  if (!registrations.length) { w.innerHTML = '<div class="empty-state">📭 No registrations yet. Students will appear here after they submit the form.</div>'; return; }
-  const statuses = ['Pending','Payment Verified','Rejected','Completed'];
-  let html = `<p style="font-size:.82rem;color:#64748b;margin-bottom:12px;">Total: <strong>${registrations.length}</strong> registrations</p><div style="overflow-x:auto"><table class="reg-table"><thead><tr><th>#</th><th>Name</th><th>WhatsApp</th><th>Email</th><th>Txn ID</th><th>Date</th><th>Status</th></tr></thead><tbody>`;
-  registrations.forEach((r,i) => {
-    const opts = statuses.map(s => `<option value="${s}"${r.status===s?' selected':''}>${s}</option>`).join('');
-    html += `<tr><td>${i+1}</td><td style="font-weight:600;color:#0f172a">${esc(r.name)}</td><td><a href="https://wa.me/91${r.wa}" target="_blank" style="color:#25d366;text-decoration:none">+91${esc(r.wa)}</a></td><td>${esc(r.email)}</td><td style="font-family:monospace;font-size:.78rem">${esc(r.txn)}</td><td style="white-space:nowrap">${esc(r.timestamp)}</td><td><select class="status-select" data-id="${r.id}">${opts}</select></td></tr>`;
-  });
-  html += '</tbody></table></div>';
-  w.innerHTML = html;
-  w.querySelectorAll('.status-select').forEach(sel => {
-    sel.addEventListener('change', () => {
-      const reg = registrations.find(x => x.id === +sel.dataset.id);
-      if (reg) { reg.status = sel.value; saveReg(); }
-    });
-  });
-}
+function renderRegTable() { /* admin hidden */ }
