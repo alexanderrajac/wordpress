@@ -2,8 +2,8 @@
 
 /* ===== CONFIG ===== */
 let CONFIG = {
-  whatsappNumber: '919999999999',
-  upiId: 'YOUR-UPI-ID@upi',
+  whatsappNumber: '918248651695',
+  upiId: '8248651695-3@ybl',
   qrImageSrc: '',
   price: '2,999',
   classDates: '',
@@ -285,8 +285,9 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
 });
 
-/* ===== ADMIN PANEL — HIDDEN (commented out for public site) ===== */
-/*
+/* ===== ADMIN PANEL ===== */
+// Access: Press Ctrl+Shift+A (or Cmd+Shift+A on Mac) on the live page
+
 const adminPanelHTML = `
 <div class="admin-panel" id="adminPanel">
   <div class="admin-box" role="dialog" aria-modal="true" aria-label="Admin Panel">
@@ -378,7 +379,11 @@ document.getElementById('adminSave').addEventListener('click', () => {
   if (pFill) pFill.style.width = pctNew + '%';
   ['seatsTaken'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = CONFIG.seatsTaken; });
 });
-*/
+
+// Keyboard shortcut to open admin: Ctrl+Shift+A
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') openAdmin();
+});
 
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
